@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Muhammad Umer Farooq" />
+    <title>Font Picker</title>
+    <style>
+        .font-picker-model {
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .font-picker-model-content {
+            position: relative;
+            background-color: #ffffff !important;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+        }
+
+        .font-picker-model-body-content-list {
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        .font-picker-model-body-content-list li span {
+            list-style-type: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+
+        .font-picker-model-body-content-list li span i {
+            font-size: 15px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .font-picker-model-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .font-picker-model-body {
+            padding: 2px 16px;
+        }
+
+        .font-picker-model-header-close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+
+        }
+
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="model"></div>
+    <footer>
+        <h4>
+            Made with 💕 by Umer <a href="https://github.com/Lablnet/TicTacToe">Source</a>
+        </h4>
+    </footer>
+</body>
+<script src="public/bundle.js" charset="utf-8"></script>
+
+
+</html>
