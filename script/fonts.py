@@ -58,6 +58,7 @@ def parse_fonts(fonts: dict) -> dict:
         languages = font['subsets']
         category = font['category']
         for lang in languages:
+            # Remove '-' with space and capatilize first letter.
             lang = lang.replace('-', ' ')
             lang = ' '.join(word.capitalize() for word in lang.split())
 
