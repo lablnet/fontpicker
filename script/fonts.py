@@ -72,7 +72,8 @@ def parse_fonts(fonts: dict) -> dict:
                 'family': font['family'].replace(' ', '+'),
                 'variants': font['variants'],
                 'files': font['files'],
-                'lastModified': font['lastModified']
+                'lastModified': font['lastModified'],
+                'subsets': languages
             }
         )
     return data
