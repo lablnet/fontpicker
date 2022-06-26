@@ -73,7 +73,8 @@ def parse_fonts(fonts: dict) -> dict:
                 'variants': font['variants'],
                 'files': font['files'],
                 'lastModified': font['lastModified'],
-                'subsets': languages
+                'subsets': languages,
+                'category': category
             }
         )
     return data
