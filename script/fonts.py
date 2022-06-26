@@ -74,7 +74,7 @@ def parse_fonts(fonts: dict) -> dict:
     return data
 
 
-def create_json(data: dict) -> None:
+def create_json(data: dict, path: str = 'fonts.json') -> None:
     """ Create json file with fonts.
     :param data: Dictionary with fonts.
     :return: None.
@@ -83,5 +83,5 @@ def create_json(data: dict) -> None:
     :Example:
     >>> create_json(data)
     """
-    with open('fonts.json', 'w') as f:
+    with open(path, 'w') as f:
         json.dump(data, f, indent=4)

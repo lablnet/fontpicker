@@ -9,7 +9,7 @@ if __name__ == "__main__":
     fonts = get_fonts_from_gapi(url)
     if fonts:
         fonts = parse_fonts(fonts)
-        create_json(fonts)
+        create_json(fonts, './src/fonts.json')
         # print(json.dumps(fonts, indent=4))
     else:
         print("Error")
