@@ -160,3 +160,6 @@ cython_debug/
 #.idea/
 
 fonts.json
+/node_modules
+/public/bundle.js
+
