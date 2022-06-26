@@ -58,6 +58,9 @@ def parse_fonts(fonts: dict) -> dict:
         languages = font['subsets']
         category = font['category']
         for lang in languages:
+            lang = lang.replace('-', ' ')
+            lang = ' '.join(word.capitalize() for word in lang.split())
+
             if lang not in data['languages']:
                 data['languages'].append(lang)
         if category not in data['categories']:
