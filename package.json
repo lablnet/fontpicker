@@ -1,6 +1,6 @@
 {
   "name": "@lablnet/fontpicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The JavaScript fontpicker plugin",
   "keywords": ["fontpicker", "vanillajs", "googlefonts", "google-fonts", "free", "gplv3"],
   "main": "webpack.config.js",
