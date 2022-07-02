@@ -7,144 +7,54 @@
     <meta name="author" content="Muhammad Umer Farooq" />
     <title>Font Picker</title>
     <style>
-        .font-picker-model {
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .font-picker-model-content {
-            position: relative;
-            background-color: #ffffff !important;
-            margin: auto;
+        * {
+            margin: 0;
             padding: 0;
-            border: 1px solid #888;
-            width: 60%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            animation-duration: 0.4s;
         }
 
-        .font-picker-model-header {
-            padding: 2px 16px;
-            background-color: #000;
-            color: white;
-        }
-
-        .font-picker-model-body {
-            padding: 2px 16px;
-            background: #fff;
-        }
-
-        .font-picker-model-header-close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .font-picker-model-body-content-list {
-            padding: 10px;
-            height: 200px;
-            overflow-y: auto;
-        }
-
-        .font-picker-model-body-content-list li {
-            list-style: none;
+        body {
+            background-color: #f0f2f5 !important;
             padding: 15px;
-            border-bottom: 1px solid #ccc;
         }
 
-        .font-picker-model-body-content-list li:hover {
-            background-color: #ccc;
-        }
-
-        .font-picker-model-body-content-list li span {
-            list-style-type: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 25px;
-        }
-
-        .font-picker-model-body-content-list li span i {
-            font-size: 15px;
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .font-picker-model-content .preview p {
-            flex: none;
-            border-bottom: 1px solid #ced4da;
-            font-size: 18px;
-            height: 50px;
-            padding: 0 6px;
-            line-height: 50px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .font-variants .font-variants-list {
-            margin-top: 3px;
-            font-size: 13px;
+        button {
+            padding: 12px;
             color: #fff;
             background-color: #000;
-            padding: 4px;
+            margin: 12px;
+        }
+
+        p {
+            padding: 6px;
+            border: 1px solid transparent;
             margin: 4px;
-            margin-bottom: 2px;
-            white-space: nowrap;
-            border-radius: 5rem;
-            background-color: #eee;
-            color: #555;
+            font-size: 19px;
         }
 
-        .font-button button {
-            background: #000;
-            color: #fff;
-            padding: 8px;
-            float: right;
-            margin-top: -30px;
-            cursor: pointer;
+        footer {
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            position: fixed;
+            padding: 12px;
         }
 
-        @-webkit-keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
-
-        @keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-
-            to {
-                top: 0;
-                opacity: 1
+        @media screen and (max-width: 900px) {
+            footer {
+                position: relative;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="model"></div>
+    <button id="picker">Font Picker</button>
+    <p id="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, deleniti laboriosam molestias alias quia
+        animi, odio itaque dolores ut quasi mollitia voluptatibus deserunt neque possimus! Modi quam sunt laboriosam
+        sed.
+    </p>
     <footer>
         <h4>
             Made with 💕 by Umer <a href="https://github.com/Lablnet/TicTacToe">Source</a>
@@ -153,6 +63,13 @@
 </body>
 <script src="public/bundle.js" charset="utf-8"></script>
 
-<script></script>
+<script>
+    let picker = document.getElementById("picker");
+    fontpicker(picker, (data) => {
+        let paragraph = document.getElementById("paragraph");
+        paragraph.style.fontFamily = data.fontFamily;
+        console.log("selected", data)
+    })
+</script>
 
 </html>
