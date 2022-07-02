@@ -1,5 +1,6 @@
 const path = require('path');
 module.exports = {
+    name: "production",
     entry: "./src/fontpicker.js",
     output: {
         filename: "bundle.js",
@@ -19,7 +20,6 @@ module.exports = {
                     'style-loader',
                     // Translates CSS into CommonJS
                     'css-loader',
-
                     //Scss loader
                     'sass-loader'
                 ],
