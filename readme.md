@@ -1,3 +1,5 @@
+[![pages-build-deployment](https://github.com/lablnet/fontpicker/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/lablnet/fontpicker/actions/workflows/pages/pages-build-deployment)
+
 # fontpicker
 
 A standalone font picker for the web. A package to quickly choose fonts from Google Web Fonts and preview a font from Google's large range of free fonts, and optionally select a font weight and font style (normal or italics).
