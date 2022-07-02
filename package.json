@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/lablnet/fontpicker.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Muhammad Umer Farooq",
   "license": "GPLv3",
   "bugs": {
