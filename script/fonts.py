@@ -2,6 +2,7 @@ import requests
 import json
 from typing import Union
 import os
+import re
 from dotenv import load_dotenv
 
 # Load .env file
@@ -66,13 +67,24 @@ def parse_fonts(fonts: dict) -> dict:
                 data['languages'].append(lang)
         if category not in data['categories']:
             data['categories'].append(category)
+            
+        v = font['variants']
+        variants = []
+        for variant in v:
+            # search numeric with italic
+            if re.search(r'\d+italic', variant):
+                variants.append(variant.replace('italic', 'i'))
+            elif  variant == 'regular': continue
+            else:
+                variants.append(variant)
+                
         data['fonts'].append(
             {
                 # remove space with +.
                 'family': font['family'].replace(' ', '+'),
-                'variants': font['variants'],
-                'files': font['files'],
-                'lastModified': font['lastModified'],
+                'variants': variants,
+                # 'files': font['files'],
+                # 'lastModified': font['lastModified'],
                 'subsets': languages,
                 'category': category
             }

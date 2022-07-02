@@ -26,7 +26,7 @@
             margin: auto;
             padding: 0;
             border: 1px solid #888;
-            width: 80%;
+            width: 60%;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             -webkit-animation-name: animatetop;
             -webkit-animation-duration: 0.4s;
@@ -34,10 +34,39 @@
             animation-duration: 0.4s;
         }
 
+        .font-picker-model-header {
+            padding: 2px 16px;
+            background-color: #000;
+            color: white;
+        }
+
+        .font-picker-model-body {
+            padding: 2px 16px;
+            background: #fff;
+        }
+
+        .font-picker-model-header-close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         .font-picker-model-body-content-list {
             padding: 10px;
             height: 200px;
             overflow-y: auto;
+        }
+
+        .font-picker-model-body-content-list li {
+            list-style: none;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .font-picker-model-body-content-list li:hover {
+            background-color: #ccc;
         }
 
         .font-picker-model-body-content-list li span {
@@ -53,22 +82,39 @@
             font-style: normal;
         }
 
-        .font-picker-model-header {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
+        .font-picker-model-content .preview p {
+            flex: none;
+            border-bottom: 1px solid #ced4da;
+            font-size: 18px;
+            height: 50px;
+            padding: 0 6px;
+            line-height: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .font-picker-model-body {
-            padding: 2px 16px;
+        .font-variants .font-variants-list {
+            margin-top: 3px;
+            font-size: 13px;
+            color: #fff;
+            background-color: #000;
+            padding: 4px;
+            margin: 4px;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            border-radius: 5rem;
+            background-color: #eee;
+            color: #555;
         }
 
-        .font-picker-model-header-close {
-            color: white;
+        .font-button button {
+            background: #000;
+            color: #fff;
+            padding: 8px;
             float: right;
-            font-size: 28px;
-            font-weight: bold;
-
+            margin-top: -30px;
+            cursor: pointer;
         }
 
         @-webkit-keyframes animatetop {
