@@ -1,5 +1,5 @@
 {
-  "name": "fontpicker",
+  "name": "@lablnet/fontpicker",
   "version": "1.0.0",
   "description": "The JavaScript fontpicker plugin",
   "main": "webpack.config.js",
