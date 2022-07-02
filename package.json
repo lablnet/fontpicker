@@ -2,6 +2,7 @@
   "name": "@lablnet/fontpicker",
   "version": "1.0.0",
   "description": "The JavaScript fontpicker plugin",
+  "keywords": ["fontpicker", "vanillajs", "googlefonts", "google-fonts", "free", "gplv3"],
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/lablnet/fontpicker.git"
   },
-  "keywords": [],
   "author": "Muhammad Umer Farooq",
   "license": "GPLv3",
   "bugs": {
