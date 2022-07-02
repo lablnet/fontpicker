@@ -160,5 +160,4 @@ cython_debug/
 #.idea/
 
 /node_modules
-/public/bundle.js
 
