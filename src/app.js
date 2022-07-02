@@ -1,4 +1,4 @@
-import {fontpicker} from './fontpicker';
+import { fontpicker } from './fontpicker';
 //import './style.css';
 
 let selector = document.getElementById("model");
